@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  ContactsTableViewController.swift
 //  OpenContact
 //
 //  Created by Ambroise COLLON on 08/10/2018.
@@ -8,14 +8,30 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class ContactsTableViewController: UITableViewController {
 
-    var contacts = Contact.all
+    // MARK: - Properties
+
+    private let repository = ContactRepository()
+    private var contacts: [Contact] = []
+
+    // MARK: - View life cycle
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        contacts = Contact.all
-        tableView.reloadData()
+        getContacts()
     }
+
+    // MARK: - Private
+
+    private func getContacts() {
+        repository.getContacts(completion: { [weak self] contacts in
+            self?.contacts = contacts
+            self?.tableView.reloadData()
+        })
+    }
+
+    // MARK: - UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

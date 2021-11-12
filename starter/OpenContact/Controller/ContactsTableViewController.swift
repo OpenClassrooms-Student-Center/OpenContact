@@ -2,18 +2,26 @@
 //  TableViewController.swift
 //  OpenContact
 //
-//  Created by Ambroise COLLON on 08/10/2018.
-//  Copyright © 2018 OpenClassrooms. All rights reserved.
+//  Created by Bertrand BLOC'H on 11/11/2021.
+//  Copyright © 2021 OpenClassrooms. All rights reserved.
 //
 
 import UIKit
 
-class TableViewController: UITableViewController {
+final class ContactsTableViewController: UITableViewController {
+
+    // MARK: - Properties
+
+    // TODO : ad properties to fetch data from database and keep them localy in a collection
+
+    // MARK: - View life cycle
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+
+    // MARK: - UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

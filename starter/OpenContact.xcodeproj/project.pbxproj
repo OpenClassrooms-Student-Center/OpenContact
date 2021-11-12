@@ -12,7 +12,7 @@
 		C91B6BAD216BAB7A00385D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91B6BAC216BAB7A00385D71 /* Assets.xcassets */; };
 		C91B6BB0216BAB7A00385D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91B6BAE216BAB7A00385D71 /* LaunchScreen.storyboard */; };
 		C91B6BB9216BAD7200385D71 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BB8216BAD7200385D71 /* AddContactViewController.swift */; };
-		C91B6BBB216BAD7F00385D71 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BBA216BAD7F00385D71 /* TableViewController.swift */; };
+		C91B6BBB216BAD7F00385D71 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BBA216BAD7F00385D71 /* ContactsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		C91B6BAF216BAB7A00385D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91B6BB1216BAB7A00385D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C91B6BB8216BAD7200385D71 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
-		C91B6BBA216BAD7F00385D71 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C91B6BBA216BAD7F00385D71 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +56,11 @@
 		C91B6BA4216BAB7900385D71 /* OpenContact */ = {
 			isa = PBXGroup;
 			children = (
-				C91B6BB7216BAB8A00385D71 /* Supporting Files */,
+				C91B6BA5216BAB7900385D71 /* AppDelegate.swift */,
 				C91B6BBE216BAE3B00385D71 /* Model */,
 				C91B6BBD216BAE3500385D71 /* View */,
 				C91B6BBC216BAE2C00385D71 /* Controller */,
+				C91B6BB7216BAB8A00385D71 /* Supporting Files */,
 			);
 			path = OpenContact;
 			sourceTree = "<group>";
@@ -67,7 +68,6 @@
 		C91B6BB7216BAB8A00385D71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C91B6BA5216BAB7900385D71 /* AppDelegate.swift */,
 				C91B6BAC216BAB7A00385D71 /* Assets.xcassets */,
 				C91B6BAE216BAB7A00385D71 /* LaunchScreen.storyboard */,
 				C91B6BB1216BAB7A00385D71 /* Info.plist */,
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C91B6BB8216BAD7200385D71 /* AddContactViewController.swift */,
-				C91B6BBA216BAD7F00385D71 /* TableViewController.swift */,
+				C91B6BBA216BAD7F00385D71 /* ContactsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,11 +126,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = OpenClassrooms;
 				TargetAttributes = {
 					C91B6BA1216BAB7900385D71 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -171,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91B6BA6216BAB7900385D71 /* AppDelegate.swift in Sources */,
-				C91B6BBB216BAD7F00385D71 /* TableViewController.swift in Sources */,
+				C91B6BBB216BAD7F00385D71 /* ContactsTableViewController.swift in Sources */,
 				C91B6BB9216BAD7200385D71 /* AddContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +225,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -285,6 +287,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -326,7 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.OpenContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -343,7 +346,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.OpenContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

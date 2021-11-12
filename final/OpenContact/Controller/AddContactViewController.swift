@@ -8,28 +8,49 @@
 
 import UIKit
 
-class AddContactViewController: UIViewController {
+final class AddContactViewController: UIViewController {
+
+    // MARK: - Properties
+
+    private let repository = ContactRepository()
+
+    // MARK: - Outlets
+
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
 
+    // MARK: - Actions
+
     @IBAction func save() {
-        let lastName = lastNameTextField.text
-        let firstName = firstNameTextField.text
-        let phone = phoneTextField.text
+        saveContact()
+    }
 
-        let contact = Contact(context: AppDelegate.viewContext)
-        contact.lastName = lastName
-        contact.firstName = firstName
-        contact.phone = phone
-        try? AppDelegate.viewContext.save()
+    // MARK: - Private
 
-        navigationController?.popViewController(animated: true)
+    private func saveContact() {
+        guard
+            let lastName = lastNameTextField.text,
+            let firstName = firstNameTextField.text,
+            let phone = phoneTextField.text
+        else { return }
+
+        if lastName.isEmpty || firstName.isEmpty || phone.isEmpty {
+            print("Un champs obligatoire est vide")
+            return
+        }
+
+        repository.saveContact(
+            lastName: lastName,
+            firstName: firstName,
+            phone: phone,
+            completion: { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            })
     }
 }
 
-extension AddContactViewController: UITextFieldDelegate {
-
+private extension AddContactViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if lastNameTextField.isFirstResponder {
             firstNameTextField.becomeFirstResponder()
@@ -46,5 +67,4 @@ extension AddContactViewController: UITextFieldDelegate {
         firstNameTextField.resignFirstResponder()
         phoneTextField.resignFirstResponder()
     }
-
 }

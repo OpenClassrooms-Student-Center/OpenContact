@@ -2,16 +2,21 @@
 //  AddContactViewController.swift
 //  OpenContact
 //
-//  Created by Ambroise COLLON on 08/10/2018.
-//  Copyright © 2018 OpenClassrooms. All rights reserved.
+//  Created by Bertrand BLOC'H on 11/11/2021.
+//  Copyright © 2021 OpenClassrooms. All rights reserved.
 //
 
 import UIKit
 
-class AddContactViewController: UIViewController {
+final class AddContactViewController: UIViewController {
+
+    // MARK: - Outlets
+
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+
+    // MARK: - Actions
 
     @IBAction func save() {
         let lastName = lastNameTextField.text
@@ -42,5 +47,4 @@ extension AddContactViewController: UITextFieldDelegate {
         firstNameTextField.resignFirstResponder()
         phoneTextField.resignFirstResponder()
     }
-
 }

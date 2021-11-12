@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FD3FF9C273D61E600E06603 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FF9B273D61E600E06603 /* CoreDataStack.swift */; };
+		2FD3FF9F273D622600E06603 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3FF9E273D622600E06603 /* ContactRepository.swift */; };
 		C91B6BA6216BAB7900385D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BA5216BAB7900385D71 /* AppDelegate.swift */; };
 		C91B6BAB216BAB7900385D71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91B6BA9216BAB7900385D71 /* Main.storyboard */; };
 		C91B6BAD216BAB7A00385D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91B6BAC216BAB7A00385D71 /* Assets.xcassets */; };
 		C91B6BB0216BAB7A00385D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91B6BAE216BAB7A00385D71 /* LaunchScreen.storyboard */; };
 		C91B6BB9216BAD7200385D71 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BB8216BAD7200385D71 /* AddContactViewController.swift */; };
-		C91B6BBB216BAD7F00385D71 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BBA216BAD7F00385D71 /* TableViewController.swift */; };
+		C91B6BBB216BAD7F00385D71 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BBA216BAD7F00385D71 /* ContactsTableViewController.swift */; };
 		C91B6BC1216BB22B00385D71 /* OpenContact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BBF216BB22B00385D71 /* OpenContact.xcdatamodeld */; };
 		C91B6BC3216BB28C00385D71 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B6BC2216BB28C00385D71 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FD3FF9B273D61E600E06603 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		2FD3FF9E273D622600E06603 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
 		C91B6BA2216BAB7900385D71 /* OpenContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91B6BA5216BAB7900385D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C91B6BAA216BAB7900385D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -25,7 +29,7 @@
 		C91B6BAF216BAB7A00385D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91B6BB1216BAB7A00385D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C91B6BB8216BAD7200385D71 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
-		C91B6BBA216BAD7F00385D71 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C91B6BBA216BAD7F00385D71 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		C91B6BC0216BB22B00385D71 /* OpenContact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenContact.xcdatamodel; sourceTree = "<group>"; };
 		C91B6BC2216BB28C00385D71 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FD3FF9D273D620F00E06603 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C91B6BBF216BB22B00385D71 /* OpenContact.xcdatamodeld */,
+				C91B6BC2216BB28C00385D71 /* Contact.swift */,
+				2FD3FF9B273D61E600E06603 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		C91B6B99216BAB7900385D71 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +74,11 @@
 		C91B6BA4216BAB7900385D71 /* OpenContact */ = {
 			isa = PBXGroup;
 			children = (
-				C91B6BB7216BAB8A00385D71 /* Supporting Files */,
+				C91B6BA5216BAB7900385D71 /* AppDelegate.swift */,
 				C91B6BBE216BAE3B00385D71 /* Model */,
 				C91B6BBD216BAE3500385D71 /* View */,
 				C91B6BBC216BAE2C00385D71 /* Controller */,
+				C91B6BB7216BAB8A00385D71 /* Supporting Files */,
 			);
 			path = OpenContact;
 			sourceTree = "<group>";
@@ -71,7 +86,6 @@
 		C91B6BB7216BAB8A00385D71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C91B6BA5216BAB7900385D71 /* AppDelegate.swift */,
 				C91B6BAC216BAB7A00385D71 /* Assets.xcassets */,
 				C91B6BAE216BAB7A00385D71 /* LaunchScreen.storyboard */,
 				C91B6BB1216BAB7A00385D71 /* Info.plist */,
@@ -82,7 +96,7 @@
 		C91B6BBC216BAE2C00385D71 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C91B6BBA216BAD7F00385D71 /* TableViewController.swift */,
+				C91B6BBA216BAD7F00385D71 /* ContactsTableViewController.swift */,
 				C91B6BB8216BAD7200385D71 /* AddContactViewController.swift */,
 			);
 			path = Controller;
@@ -99,8 +113,8 @@
 		C91B6BBE216BAE3B00385D71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C91B6BBF216BB22B00385D71 /* OpenContact.xcdatamodeld */,
-				C91B6BC2216BB28C00385D71 /* Contact.swift */,
+				2FD3FF9D273D620F00E06603 /* CoreData */,
+				2FD3FF9E273D622600E06603 /* ContactRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,11 +146,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = OpenClassrooms;
 				TargetAttributes = {
 					C91B6BA1216BAB7900385D71 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -176,9 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FD3FF9F273D622600E06603 /* ContactRepository.swift in Sources */,
 				C91B6BC3216BB28C00385D71 /* Contact.swift in Sources */,
 				C91B6BA6216BAB7900385D71 /* AppDelegate.swift in Sources */,
-				C91B6BBB216BAD7F00385D71 /* TableViewController.swift in Sources */,
+				C91B6BBB216BAD7F00385D71 /* ContactsTableViewController.swift in Sources */,
+				2FD3FF9C273D61E600E06603 /* CoreDataStack.swift in Sources */,
 				C91B6BC1216BB22B00385D71 /* OpenContact.xcdatamodeld in Sources */,
 				C91B6BB9216BAD7200385D71 /* AddContactViewController.swift in Sources */,
 			);
@@ -232,6 +249,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -293,6 +311,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -334,7 +353,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.OpenContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -351,7 +370,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.OpenContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
